@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=">
+  <title>Technical Documentation</title>
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link rel="stylesheet" href="./css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <nav id="navbar">
+      <header class="title" id="titulo_pcpal">Introduccion a CSS</header>
+        <ul>
+           <li>
+             <a class="nav-link" href="#Presentacion">Presentacion</a>
+           </li>
+           <li>
+             <a class="nav-link" href="#Porque_utilizar_CSS_?">Porque utilizar CSS ?</a>
+           </li>
+           <li>
+             <a class="nav-link" href="#Problema_resuelto_con_CSS">Problema resuelto con CSS</a>
+           </li>
+           <li>
+             <a class="nav-link" href="#Sintaxis_CSS">Sintaxis CSS</a>
+           </li>
+           <li>
+             <a class="nav-link" href="#Selectores_CSS">Selectores CSS</a>
+           </li>
+           <li>
+             <a class="nav-link" href="#Como_insertar_CSS">Como insertar CSS</a>
+           </li>
+           <li>
+             <a class="nav-link" href="#Comentarios_CSS">Comentarios CSS</a>
+           </li>
+           <li>
+             <a class="nav-link" href="#Bordes_CSS">Bordes CSS</a>
+           </li>
+           <li>
+             <a class="nav-link" href="#Margenes_CSS">Margenes CSS</a>
+           </li>
+           <li>
+             <a class="nav-link" href="#Padding_CSS">Padding CSS</a>
+           </li>
+         </ul>
+     </nav>
+  <main id="main-doc">
+      <section id="Presentacion" class="main-section">
+        <header class="title">Presentacion</header>
+          <article>
+            <p>CSS es el lenguaje que usamos para diseñar un documento HTML. CSS describe como se deben mostrar los elementos HTML.</p>
+              <p>¿Que significa CSS?</p>
+            <ul class="item-list">
+               <li><strong>CSS</strong> son las siglas de <strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets</li>
+               <li>CSS describe <strong>como se mostraran los elementos HTML en pantalla, papel o en otros medios.</strong></li>
+               <li>CSS <strong>ahorra mucho trabajo.</strong>Puede controlar el diseño de varias paginas web a la vez</li>
+               <li>Las hojas de estilo externas se almacenan en <strong>archivos CSS</strong></li>
+             </ul>  
+            <img src="https://cdn.pixabay.com/photo/2016/11/19/23/00/css3-1841590_960_720.png" class="logo">
+          </article>
+    </section>
+    
+        <section id="Porque_utilizar_CSS_?" class="main-section">
+          <header class="title">Porque utilizar CSS ?</header>
+            <article>
+              <p>CSS se utiliza para definir estilos para sus páginas web, incluido el diseño, el diseño y las variaciones en la visualización para diferentes dispositivos y tamaños de pantalla.</p> 
+              <p>Veamos un ejemplo:</p>
+              <span class="code_presentacion">
+                     <p><code>body { <br>
+                        background-color: lightblue;<br>
+                    } <p> h1 { <br>
+                      color: white;
+                      text-align: center;<br>
+                    } <p> p { <br>
+                      font-family: verdana;
+                      font-size: 20px;<br>}
+                     </code>
+                </p>
+                  </span>
+          </article>
+         </section>
+    
+          <section id="Problema_resuelto_con_CSS" class="main-section">
+      <header class="title">Problema resuelto con CSS</header>
+      <article>
+        <p>¡HTML NUNCA tuvo la intención de contener etiquetas para formatear una página web!<br>
+HTML se creó para <strong>describir el contenido</strong> de una página web, como:</p><br>
+        <span class="code_presentacion">
+          <code>
+         Etiqueta = h1 - Esta etiqueta es para un encabezado<br>
+         Etiqueta = p - Esta etiqueta es para un párrafo.
+          </code>
+        </span>
+       <p>Cuando se agregaron etiquetas como <code>font</code> y atributos de color a la especificación HTML 3.2, se inició una pesadilla para los desarrolladores web. El desarrollo de grandes sitios web, donde se agregaban fuentes e información de color a cada página, se convirtió en un proceso largo y costoso.<br> Para resolver este problema, el World Wide Web Consortium (W3C) creó CSS.<br>
+  CSS eliminó el formato de estilo de la página HTML.</p>
+        <p><strong>¡CSS ahorra mucho trabajo!</strong><br>
+        Las definiciones de estilo normalmente se guardan en archivos .css externos.<br>Con un archivo de hoja de estilo externo, puede cambiar el aspecto de un sitio web completo cambiando solo un archivo.</p>
+              
+        <section id="Sintaxis_CSS" class="main-section">
+      <header class="title">Sintaxis CSS</header>
+      <article>
+           <p>Un conjunto de reglas CSS consta de un selector y un bloque de declaración:</p>
+          <p><strong>Selector &nbsp&nbsp&nbsp&nbsp Declaración &nbsp&nbsp&nbsp&nbsp Declaración</p></strong>
+           <code class="selector_CSS">&nbsph1&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{color:blue;&nbsp&nbsp&nbsp font-size:12px;}</code>
+            <p class="prop-val"><strong>Propiedad : Valor &nbsp&nbsp&nbsp&nbsp Propiedad : Valor</p></strong>
+            <p>El selector apunta al elemento HTML al que desea aplicar estilo.<br>
+El bloque de declaración contiene una o más declaraciones separadas por punto y coma.<br>
+Cada declaración incluye un nombre de propiedad CSS y un valor, separados por dos puntos.<br>
+Varias declaraciones de CSS se separan con punto y coma ( ; ) y los bloques de declaración están rodeados por llaves.{ }</p>
+            <p>Por ejemplo:</p>
+             <code class="code_presentacion">p { <br>
+                  color: red;<br>
+                  text-align: center;<br>
+               } </code>
+            <p>Explicación del ejemplo:</p>
+         <ul>
+           <li><code>p</code> Es un <strong>selector</strong> en CSS (apunta al elemento HTML que desea aplicar estilo: <code>p</code> ).</li>
+           <li><code>color</code> Es una propiedad y <code>red</code> es el valor de la propiedad.</li>
+           <li><code>text-align</code> Es una propiedad y <code>center</code>es el valor de la propiedad.</li>
+         </ul>
+      </article>
+  </section>
+  
+  <section id="Selectores_CSS" class="main-section">
+      <header class="title">Selectores CSS</header>
+        <article>
+          <p>Los selectores CSS se utilizan para "buscar" (o seleccionar) los elementos HTML que desea aplicar estilo.
+            Podemos dividir los selectores de CSS en cinco categorías:</p>
+        <ul class="list_item">
+          <li>Selectores simples (seleccione elementos basados en nombre, identificación, clase)</li>
+          <li>Selectores de combinador (seleccione elementos basados en una relación específica entre ellos)</li>
+          <li>Selectores de pseudo-clase (seleccione elementos basados en un cierto estado)</li>
+          <li>Selectores de pseudoelementos (seleccionar y aplicar estilo a una parte de un elemento)</li>
+          <li>Selectores de atributos (seleccione elementos basados ​​en un atributo o valor de atributo)</li>
+          <p><strong>El selector de id de CSS</strong></p>
+          <p>El selector de id utiliza el atributo id de un elemento HTML para seleccionar un elemento específico.</p>
+          <p>La identificación de un elemento es única dentro de una página, por lo que el selector de identificación se utiliza para seleccionar un elemento único.</p>
+          <p>Para seleccionar un elemento con una identificación específica, escriba un carácter de almohadilla (#), seguido de la identificación del elemento.</p>
+          <p><em>La siguiente regla CSS se aplicará al elemento HTML con id = "tittle_1":</em></p>
+          <code class="code_presentacion">#tittle_1{ <br>
+                  color: red;<br>
+                  text-align: center;<br>
+               } </code>
+          <p class="nota"><strong>Nota:</strong> ¡ Un nombre de identificación <strong>no</strong> puede comenzar con un número !</p>
+           <p><strong>El selector de clases de CSS</strong></p>
+          <p>El selector de clases selecciona elementos HTML con un atributo de clase específico.</p>
+          <p>Para seleccionar elementos con una clase específica, escriba un punto ( . ), Seguido del nombre de la clase.</p>
+          <p><em>En este ejemplo, todos los elementos HTML con class = "center" serán rojos y alineados al centro: </em></p>
+          <code class="code_presentacion">.center{ <br>
+                  color: red;<br>
+                  text-align: center;<br>
+               } </code>
+          <p class="nota"><strong>Nota:</strong>¡ El nombre de una clase <strong>no</strong> puede comenzar con un número!</p>
+          <p><strong>El selector universal de CSS</strong></p>
+          <p>El selector universal ( * ) selecciona todos los elementos HTML de la página.</p>
+          <p><em>La siguiente regla CSS afectará a todos los elementos HTML de la página:</em></p>
+          <code class="code_presentacion">*{ <br>
+                  color: blue;<br>
+                  text-align: center;<br>
+               } </code>
+          </article>
+          </section>
+    
+      <section id="Como_insertar_CSS" class="main-section">
+        <header class="title">Como insertar CSS</header>
+          <article>
+            <p>Hay tres formas de insertar una hoja de estilo:</p>
+            <ul>
+              <li>CSS externo</li>
+              <li>CSS interno</li>
+              <li>CSS en línea</li>
+            </ul>
+            <p><strong>CSS externo</strong></p>
+            <p>Con una hoja de estilo externa, puede cambiar el aspecto de un sitio web completo cambiando solo un archivo.<br>
+Cada página HTML debe incluir una referencia al archivo de hoja de estilo externo dentro del elemento <code>link</code>, dentro de la sección del encabezado.</p>
+            <p>Una hoja de estilo externa se puede escribir en cualquier editor de texto y se debe guardar con una extensión .css.<br>
+              El archivo .css externo no debe contener etiquetas HTML.</p>
+<p><em>Así es como se ve el archivo "mystyle.css":</em></p>
+            <code class="code_presentacion">body {<br>
+                           background-color: lightblue;<br>
+                          }<br>
+                          h1 {<br>
+                            color: navy;<br>
+                            margin-left: 20px;<br>
+                           }</code>
+             <p class="nota"><strong>Nota:</strong> No agregue un espacio entre el valor de la propiedad y la unidad <code>(como margin-left: 20 px;)</code>. La forma correcta es: <code>margin-left: 20px;</code></p>
+            <p><strong>CSS interno</strong></p>
+            <p>Se puede utilizar una hoja de estilo interna si una sola página HTML tiene un estilo único.<br>
+El estilo interno se define dentro del elemento <code>style</code>, dentro de la sección de <code>head</code>.</p>
+            <p><strong>CSS interno</strong></p>
+            <p>Los estilos en línea se definen dentro del atributo <code>"style"</code> del elemento relevante.</p>
+            <p><strong>Orden en cascada</strong></p>
+            <p>¿Qué estilo se utilizará cuando haya más de un estilo especificado para un elemento HTML?</p>
+            <p>Todos los estilos de una página se convertirán en una "cascada" en una nueva hoja de estilo "virtual" según las siguientes reglas, donde el número uno tiene la máxima prioridad:</p>
+            <ul class="cascada">
+              <li>Estilo en línea (dentro de un elemento HTML)</li>
+              <li>Hojas de estilo externas e internas (en la sección de cabecera)</li>
+              <li>Navegador predeterminado</li>
+            </ul>
+         </article>
+       </section>
+            
+            <section id="Comentarios_CSS" class="main-section">
+               <header class="title">Comentarios CSS</header>
+                 <article>
+                      <p>Los comentarios se utilizan para explicar el código y pueden ayudar cuando edite el código fuente en una fecha posterior.<br>Los navegadores ignoran los comentarios.<br>Se coloca un comentario CSS dentro del <code>style</code> elemento y comienza /* y termina con */</p>Por ejemplo: <br>
+                    <code class="code_presentacion">
+                   /* This is a single-line comment */<br>
+                      p {<br>
+                      color: red;<br>
+                      }</code>
+                <p>Se pueden agregar comentarios donde quiera en el código y pueden abarcar varias líneas también:</p> 
+                   <code class="code_presentacion">
+                     /* This is<br>
+                      a multi-line<br>
+                      comment */<br>
+                     p {<br>
+                      color: red;  /* Set text color to red */<br>
+                     }</code>
+            </article>
+       </section>
+    
+     <section id="Bordes_CSS" class="main-section">
+               <header class="title">Bordes CSS</header>
+                 <article>
+                   <p><strong>Propiedades de borde CSS</strong></p>
+                   <p>Las  propiedades <code>border</code> de CSS le permiten especificar el estilo, el ancho y el color del borde de un elemento.
+                   <p class="border1">Tengo bordes por todos lados<p>
+                   <p class="border2">Tengo un borde inferior rojo<p>
+                   <p class="border3">Tengo bordes redondeados<p>
+                   <p class="border4">Tengo un borde izquierdo azul<p>
+             <p><strong>Estilos de borde</strong></p>
+                   <p>La propiedad <code>border-style</code> especifica qué tipo de borde mostrar.</p>
+                   <p>Se permiten los siguientes valores:</p>
+                   <ul>
+                     <li><code>dotted</code>- Define un borde punteado.</li>
+                     <li><code>dashed</code>- Define un borde con lineas cortas continuas.</li>
+                     <li><code>solid</code>- Define un borde sólido.</li>
+                     <li><code>double</code>- Define un borde doble.</li>
+                     <li><code>groove</code>- Define un borde acanalado en 3D. El efecto depende del valor del color del borde.</li>
+                     <li><code>ridge</code>- Define un borde estriado en 3D. El efecto depende del valor del color del borde.</li>
+                     <li><code>inset</code>- Define un borde insertado en 3D. El efecto depende del valor del color del borde.</li>
+                     <li><code>outset</code>- Define un borde inicial 3D. El efecto depende del valor del color del borde.</li>
+                     <li><code>none</code>- No define ningún borde.</li>
+                     <li><code>hidden</code>- Define un borde oculto.</li>
+                   </ul>
+                </article>
+              </section>
+    
+            <section id="Margenes_CSS" class="main-section">
+               <header class="title">Margenes CSS</header>
+                 <article>
+                   <p>Las propiedades <code>margin</code> de CSS se utilizan para crear espacio alrededor de los elementos, fuera de los bordes definidos.</p>
+                   <p>Con CSS, tienes control total sobre los márgenes. Existen propiedades para establecer el margen para cada lado de un elemento (superior, derecha, inferior e izquierda).</p>
+                   <p>CSS tiene propiedades para especificar el margen para cada lado de un elemento:</p>
+                  <ul class="margin_list">
+                  <li><code>margin-top</code></li>
+                  <li><code>margin-right</code></li>
+                  <li><code>margin-bottom</code></li>
+                  <li><code>margin-left</code></li>  
+                  </ul>
+                   <p>Todas las propiedades de los márgenes pueden tener los siguientes valores:</p>
+               <ul class="margin_list">
+                  <li>auto: El navegador calcula el margen</li>
+                  <li>lenght: Especifica un margen en px, pt, cm, etc.</li>
+                  <li> % : Especifica un margen en% del ancho del elemento contenedor</li>
+                  <li>inherit: Especifica que el margen debe heredarse del elemento principal</li>                </ul>
+                 </article>
+              </section>
+    
+                <section id="Padding_CSS" class="main-section">
+                  <header class="title">Padding CSS</header>
+                   <article>
+                   <p>Las propiedades <code>padding</code> de CSS se utilizan para generar espacio alrededor del contenido de un elemento, dentro de los bordes definidos.</p>
+                   <p>Con CSS, tienes control total sobre el padding. Existen propiedades para configurar el relleno para cada lado de un elemento (superior, derecha, inferior e izquierda).</p>
+                   <p>La propiedad <code>padding</code> es una propiedad abreviada de las siguientes propiedades de padding individuales:
+            <ul>
+                  <li><code>padding-top</code></li>
+                  <li><code>padding-right</code></li>
+                  <li><code>padding-bottom</code></li>
+                  <li><code>padding-left</code></li>  
+            </ul>
+                   <p>Pues así es como funciona:<br>Si la propiedad <code>padding</code> tiene cuatro valores:</p>
+                   <ul>
+                     <li><strong><code>padding: 25px 50px 75px 100px;</code></strong></li>
+                   </ul>
+                   <ul class="padding_list">
+                        <li>el padding superior es de 25 px</li>
+                        <li>el padding derecho es de 50 px</li>
+                        <li>el padding inferior es de 75 px</li>
+                        <li>el padding izquierdo es de 100 px</li>
+                   </ul>
+                </article>
+              </section>
+                     
+       </main>
+</body>
+</html>
